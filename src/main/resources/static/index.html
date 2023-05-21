@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FLaaS: Federated Learning as a Service</title>
+  <script>
+    function fetchGreeting() {
+      fetch('/greeting')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('greeting').textContent = data;
+      })
+      .catch(error => console.log(error));
+    }
+
+    setInterval(fetchGreeting, 1000); // Update greeting every 1 second
+  </script>
+</head>
+<body>
+<h1>FLaaS Server</h1>
+<p id="greeting"></p>
+</body>
+</html>
